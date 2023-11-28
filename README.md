@@ -1,3 +1,6 @@
+# Forked!
+- info window clear 기능 추가.
+
 # kakao_map_plugin
 
 [![pub package](https://img.shields.io/pub/v/kakao_map_plugin.svg?color=4285F4)](https://pub.dev/packages/kakao_map_plugin)
