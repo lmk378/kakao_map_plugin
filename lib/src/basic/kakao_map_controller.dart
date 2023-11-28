@@ -121,6 +121,11 @@ class KakaoMapController {
     _webViewController.runJavaScript('clearCustomOverlay();');
   }
 
+  /// clear custom overlay
+  clearInfoWindow() {
+    _webViewController.runJavaScript('clearInfoWindow();');
+  }
+
   /// move to center
   panTo(LatLng latLng) {
     _webViewController

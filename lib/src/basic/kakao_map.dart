@@ -118,6 +118,7 @@ class _KakaoMapState extends State<KakaoMap> {
     let rectangles = [];
     let polygons = [];
     let markers = [];
+    let infoWindows = [];
     let customOverlays = [];
     let clusterer = null;
     const defaultCenter = new kakao.maps.LatLng(33.450701, 126.570667);
@@ -325,6 +326,14 @@ class _KakaoMapState extends State<KakaoMap> {
         markers = [];
     }
 
+    function clearInfoWindow() {
+        for (let i = 0; i < infoWindows.length; i++) {
+            infoWindows[i].close();
+        }
+
+        infoWindows = [];
+    }
+    
     function clearCustomOverlay() {
         for (let i = 0; i < customOverlays.length; i++) {
             customOverlays[i].setMap(null);
@@ -506,6 +515,7 @@ class _KakaoMapState extends State<KakaoMap> {
                 content: infoWindowText,
                 removable: infoWindowRemovable
             });
+            infoWindows.push(infoWindow);
         }
 
         if (infoWindowFirstShow) {
